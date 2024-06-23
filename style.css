@@ -1,0 +1,124 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: rgb(180, 114, 162);
+    color: #333;
+  }
+  
+  header {
+    width: 100%;
+    background-color:rgb(127, 9, 96);
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+  
+  .container {
+    align-items: flex-start;
+    gap: 20px;
+  }
+  
+  #grid {
+    display: grid;
+    grid-template-columns: repeat(20, 25px);
+    grid-template-rows: repeat(20, 25px);
+    gap: 1px;
+    border: 4px solid #333;
+    margin-bottom: 20px;
+  }
+  
+  #grid div {
+    width: 25px;
+    height: 25px;
+    background-color: white;
+    border: 1px solid #ddd;
+    transition: background-color 0.2s, transform 0.3s;
+    animation: fadeIn 1s ease-in-out forwards;
+  }
+  
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: scale(0.8);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+  #grid div.start {
+    background-color: rgb(219, 122, 234);
+    color: white;
+  }
+  
+  #grid div.end {
+    background-color: rgb(167, 172, 237);
+    color: black;
+  }
+  
+  #grid div.wall {
+    background-color: rgb(231, 241, 153);
+  }
+  
+  #grid div.visited {
+    background-color: rgb(255, 0, 230);
+  }
+  
+  #grid div.path {
+    background-color: rgb(19, 196, 178);
+  }
+  
+  .sidebar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+  }
+  
+  .sidebar img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+  }
+  
+  .sidebar p {
+    text-align: center;
+    font-size: 1rem;
+    color: #555;
+  }
+  
+  .buttons {
+    display: flex;
+    gap: 10px;
+  }
+  
+  button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: rgb(127, 9, 96);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+  }
+  
+  button:hover {
+    background-color:rgb(180, 114, 162);
+    transform: scale(1.05);
+  }
